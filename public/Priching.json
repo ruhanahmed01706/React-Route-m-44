@@ -14,6 +14,7 @@
     {
       "id": 2,
       "name": "Standard",
+      "popular":true,
       "price": "$19/month",
       "description": "Ideal for freelancers and small businesses.",
       "features": [

@@ -4,7 +4,7 @@ import PrichingFeature from './PrichingFeature';
 const PrichingCard = ({priching}) => {
     const {name,price,description,features} = priching;
     return (
-        <div className='bg-amber-800 border p-4 rounded-2xl'>
+        <div className='bg-amber-800 border p-4 rounded-2xl flex flex-col'>
             {/* Card Header */}
             <div>
                 <h1 className='text-5xl'>{name}</h1>
@@ -12,13 +12,14 @@ const PrichingCard = ({priching}) => {
             </div>
 
             {/* Card Body */}
-            <div className='bg-amber-300 p-4 rounded-2xl text-gray-600 mt-3'>
+            <div className='bg-amber-300 p-4 rounded-2xl text-gray-600 mt-3 flex-1'>
                 <p>{description}</p>
                 {
                     features.map((feature, index) => <PrichingFeature key={index} feature={feature}></PrichingFeature>)
                 }
 
             </div>
+            <button className="btn w-full mt-4 rounded text-xl text-amber-300 hover:text-white">Subscribe</button>
         </div>
     );
 };
